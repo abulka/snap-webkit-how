@@ -1,0 +1,2 @@
+sudo snap install --devmode --dangerous *.snap
+snap list
