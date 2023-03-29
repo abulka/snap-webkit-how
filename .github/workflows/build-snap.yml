@@ -1,4 +1,4 @@
-name: Git Time Machine Snap
+name: Demo Snap
 on:
   push:
     # branches: [ main ]

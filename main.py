@@ -1,14 +1,14 @@
 import wx
 import wx.html # old, doesn't support css and javascript
-import wx.html2 # modern supports css and javascript
+import wx.html2 # modern, webkit, supports css and javascript
 
 class MyFrame(wx.Frame):
     def __init__(self):
         super().__init__(None, title="HTML Panel App")
         
         # Create HTML panel
-        self.html_panel = wx.html2.WebView.New(self)
-        # self.html_panel = wx.html.HtmlWindow(self)
+        self.html_panel = wx.html2.WebView.New(self) # fails in snap, causes Failed to spawn child process “/usr/lib/x86_64-linux-gnu/webkit2gtk-4.0/WebKitNetworkProcess” (No such file or directory)
+        # self.html_panel = wx.html.HtmlWindow(self) # worksin snap
         
         # Create text entry area
         self.text_entry = wx.TextCtrl(self)
